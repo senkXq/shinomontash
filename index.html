@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Шиномонтаж в Чебоксарах — Автосервис, Ягодный переулок 2а</title>
+<meta name="description" content="Шиномонтаж в Чебоксарах: сезонная замена колёс, шиномонтаж легковых авто и Газелей, балансировка, бесплатная диагностика ходовой при замене колёс. Отапливаемый бокс, без выходных 08:00–19:00. Ягодный переулок, 2а.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Шиномонтаж в Чебоксарах — Автосервис">
+<meta property="og:description" content="Легковые авто и Газели в отапливаемом боксе. Ежедневно 08:00–19:00. Ягодный переулок, 2а.">
+<meta property="og:locale" content="ru_RU">
+<meta name="theme-color" content="#17191d">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Автосервис",
+  "telephone": "+7 937 390-31-98",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Ягодный переулок, 2а",
+    "addressLocality": "Чебоксары",
+    "addressCountry": "RU"
+  },
+  "openingHours": "Mo-Su 08:00-19:00"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#101216;
+  --bg2:#16181d;
+  --bg3:#1b1e24;
+  --card:rgba(38,42,50,.55);
+  --line:rgba(255,255,255,.08);
+  --text:#f4f5f7;
+  --muted:#9aa3b0;
+  --accent:#ff8c1a;
+  --accent2:#ffc247;
+  --wa:#23a35a;
+  --tg:#2aa2dd;
+  --glow:0 0 24px rgba(255,140,26,.45);
+  --r:18px;
+  --r-lg:26px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{
+  font-family:'Manrope',Arial,sans-serif;background:var(--bg);color:var(--text);
+  line-height:1.55;-webkit-font-smoothing:antialiased;
+  padding-bottom:calc(76px + env(safe-area-inset-bottom));
+  overflow-x:hidden;
+}
+::selection{background:var(--accent);color:#1a1205}
+img,svg{display:block}
+a{color:var(--accent);text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+
+/* курсор-подсветка */
+#cursor-glow{
+  position:fixed;width:420px;height:420px;border-radius:50%;pointer-events:none;z-index:1;
+  background:radial-gradient(circle,rgba(255,140,26,.14),transparent 65%);
+  transform:translate(-50%,-50%);opacity:0;transition:opacity .4s;
+}
+
+/* прогресс прокрутки */
+#scroll-progress{
+  position:fixed;top:0;left:0;height:3px;width:0%;z-index:1000;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  box-shadow:0 0 12px rgba(255,140,26,.7);
+}
+
+/* кнопки */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:56px;padding:0 26px;border:none;border-radius:var(--r);
+  font:inherit;font-weight:800;font-size:16px;cursor:pointer;
+  transition:transform .18s ease,box-shadow .18s ease,filter .18s ease;
+  position:relative;
+}
+.btn:focus-visible{outline:3px solid var(--accent2);outline-offset:3px}
+.btn:active{transform:scale(.97)}
+.btn-accent{
+  background:linear-gradient(135deg,var(--accent),var(--accent2));color:#1a1205;
+  box-shadow:0 8px 30px rgba(255,140,26,.35);
+}
+.btn-accent:hover{filter:brightness(1.08);box-shadow:var(--glow)}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 8px 24px rgba(35,163,90,.3)}
+.btn-wa:hover{filter:brightness(1.1)}
+.btn-tg{background:var(--tg);color:#fff;box-shadow:0 8px 24px rgba(42,162,221,.3)}
+.btn-tg:hover{filter:brightness(1.1)}
+.btn-ghost{
+  background:rgba(255,255,255,.05);color:var(--text);border:1.5px solid var(--line);
+  backdrop-filter:blur(8px);
+}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+.btn-block{width:100%}
+
+/* ===== Шапка ===== */
+#site-header{
+  position:fixed;top:0;left:0;right:0;z-index:900;
+  padding:14px 0;transition:background .3s,box-shadow .3s,padding .3s,backdrop-filter .3s;
+}
+#site-header.scrolled{
+  background:rgba(16,18,22,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  box-shadow:0 10px 30px rgba(0,0,0,.35);padding:8px 0;
+}
+.head-row{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.logo{font-size:21px;font-weight:800;letter-spacing:.02em;color:var(--text);display:flex;align-items:center;gap:9px}
+.logo .mark{
+  width:34px;height:34px;border-radius:10px;flex:none;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  display:grid;place-items:center;color:#1a1205;
+  box-shadow:var(--glow);
+}
+#nav{display:none}
+#nav a{
+  color:var(--muted);font-weight:600;font-size:14.5px;padding:9px 12px;border-radius:10px;
+  transition:color .2s,background .2s;
+}
+#nav a:hover{color:var(--accent);background:rgba(255,140,26,.09)}
+#nav a:focus-visible{outline:2px solid var(--accent);color:var(--accent)}
+.head-call{display:inline-flex;min-height:46px;font-size:15px}
+#burger{
+  display:flex;flex-direction:column;justify-content:center;gap:5px;
+  width:46px;height:46px;background:rgba(255,255,255,.06);border:1px solid var(--line);
+  border-radius:12px;cursor:pointer;padding:0 12px;
+}
+#burger span{display:block;height:2.5px;width:22px;background:var(--text);border-radius:3px;transition:.3s}
+#burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+#burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+#burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+#burger:focus-visible{outline:2px solid var(--accent)}
+#mobile-menu{
+  position:fixed;top:70px;left:12px;right:12px;z-index:890;
+  background:rgba(22,24,29,.96);backdrop-filter:blur(18px);
+  border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:10px;flex-direction:column;
+  opacity:0;pointer-events:none;transform:translateY(-12px);
+  transition:opacity .3s,transform .3s;
+}
+#mobile-menu.open{opacity:1;pointer-events:auto;transform:translateY(0)}
+#mobile-menu a{
+  color:var(--text);font-weight:700;font-size:17px;padding:15px 16px;border-radius:12px;
+}
+#mobile-menu a:hover,#mobile-menu a:focus-visible{background:rgba(255,140,26,.12);color:var(--accent)}
+
+/* ===== Первый экран ===== */
+#hero{
+  position:relative;min-height:100svh;display:flex;align-items:center;
+  padding:120px 0 90px;overflow:hidden;
+}
+#hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden;background:linear-gradient(160deg,#14161b 0%,#191c22 55%,#12141a 100%)}
+.blob{
+  position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;will-change:transform;
+  animation:blobmove 18s ease-in-out infinite alternate;
+}
+.blob-1{width:52vw;height:52vw;max-width:640px;max-height:640px;background:rgba(255,140,26,.34);top:-16%;right:-10%}
+.blob-2{width:44vw;height:44vw;max-width:520px;max-height:520px;background:rgba(255,194,71,.16);bottom:-18%;left:-12%;animation-delay:-6s}
+@keyframes blobmove{
+  0%{transform:translate(0,0) scale(1)}
+  100%{transform:translate(-9%,12%) scale(1.18)}
+}
+/* узор протектора */
+.tread{
+  position:absolute;inset:-60px;opacity:.55;
+  background-image:repeating-linear-gradient(115deg,transparent 0 46px,rgba(255,255,255,.035) 46px 58px);
+}
+.hero-grid{position:relative;z-index:2}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.06);border:1px solid var(--line);backdrop-filter:blur(8px);
+  border-radius:100px;padding:8px 16px;font-size:14px;font-weight:700;color:var(--text);
+}
+.hero-badge .lamp{width:9px;height:9px;border-radius:50%;flex:none}
+.hero-badge.open-now .lamp{background:#39d98a;box-shadow:0 0 10px #39d98a}
+.hero-badge.closed .lamp{background:var(--accent);box-shadow:0 0 10px var(--accent)}
+#hero h1{
+  margin:22px 0 14px;font-size:clamp(31px,7.2vw,62px);line-height:1.08;
+  font-weight:800;letter-spacing:-.015em;max-width:840px;
+}
+#hero h1 em{font-style:normal;color:transparent;background:linear-gradient(100deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;text-shadow:0 0 42px rgba(255,140,26,.35)}
+#hero .sub{color:var(--muted);font-size:clamp(16px,2.4vw,20px);max-width:620px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero-rating{
+  margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;
+  color:var(--muted);font-size:15px;
+}
+.stars{color:var(--accent2);letter-spacing:2px;text-shadow:0 0 14px rgba(255,194,71,.6)}
+.hero-rating a{color:var(--muted);border-bottom:1px dashed var(--line)}
+.hero-rating a:hover{color:var(--accent)}
+/* вращающееся колесо */
+.hero-wheel{position:absolute;z-index:1;right:-140px;top:50%;translate:0 -50%;width:560px;height:560px;opacity:.5;pointer-events:none}
+.hero-wheel .spin{animation:spin 26s linear infinite;transform-origin:center}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ===== Ticker ===== */
+.ticker{
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  overflow:hidden;padding:13px 0;position:relative;transform:rotate(-.7deg) scale(1.02);
+  box-shadow:0 -8px 30px rgba(255,140,26,.25);
+}
+.ticker-track{display:flex;width:max-content;animation:tick 26s linear infinite}
+.ticker:hover .ticker-track{animation-play-state:paused}
+.ticker-track span{
+  color:#1a1205;font-weight:800;font-size:14.5px;letter-spacing:.06em;
+  padding:0 18px;white-space:nowrap;
+}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ===== Секции ===== */
+section{padding:70px 0;position:relative}
+.sec-head{margin-bottom:34px}
+.kicker{
+  display:inline-flex;align-items:center;gap:8px;color:var(--accent);font-weight:800;
+  font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px;
+}
+.kicker::before{content:"";width:26px;height:2px;background:var(--accent);border-radius:2px;box-shadow:var(--glow)}
+.sec-title{font-size:clamp(26px,5vw,40px);font-weight:800;letter-spacing:-.01em;line-height:1.15}
+.sec-lead{color:var(--muted);margin-top:10px;max-width:640px;font-size:clamp(15px,2vw,17.5px)}
+
+/* ===== Счётчики ===== */
+#stats{background:var(--bg2);border-block:1px solid var(--line);padding:54px 0}
+.stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.stat{
+  background:var(--card);backdrop-filter:blur(12px);border:1px solid var(--line);
+  border-radius:var(--r);padding:24px 18px;text-align:center;
+}
+.stat b{display:block;font-size:clamp(30px,5vw,44px);font-weight:800;line-height:1;
+  color:transparent;background:linear-gradient(120deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;background-clip:text;
+}
+.stat span{display:block;color:var(--muted);font-size:14px;margin-top:8px;font-weight:600}
+
+/* ===== Почему мы ===== */
+#why{background:radial-gradient(900px 500px at 50% -10%,rgba(255,140,26,.10),transparent 60%),var(--bg)}
+.why-grid{display:grid;gap:16px}
+.why-card{
+  position:relative;background:var(--card);backdrop-filter:blur(14px);
+  border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:26px 22px;display:flex;flex-direction:column;gap:14px;
+  transform-style:preserve-3d;transition:transform .25s ease,border-color .25s,box-shadow .25s;
+}
+.why-card:hover{
+  border-color:rgba(255,140,26,.55);
+  box-shadow:0 22px 60px rgba(0,0,0,.45),0 0 34px rgba(255,140,26,.22);
+}
+.why-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.why-num{
+  font-size:44px;font-weight:800;line-height:1;
+  color:transparent;background:linear-gradient(140deg,rgba(255,140,26,.9),rgba(255,194,71,.45));
+  -webkit-background-clip:text;background-clip:text;
+}
+.why-ico{
+  width:56px;height:56px;border-radius:16px;flex:none;
+  background:linear-gradient(135deg,rgba(255,140,26,.22),rgba(255,140,26,.06));
+  border:1px solid rgba(255,140,26,.4);color:var(--accent);
+  display:grid;place-items:center;filter:drop-shadow(0 0 12px rgba(255,140,26,.5));
+}
+.why-card h3{font-size:18.5px;font-weight:800}
+.why-card p{color:var(--muted);font-size:15px;flex:1}
+.why-card .btn{min-height:48px;font-size:15px}
+.why-card.star .sticker{
+  position:absolute;top:-13px;right:14px;z-index:2;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));color:#1a1205;
+  font-size:12px;font-weight:800;letter-spacing:.08em;padding:6px 14px;border-radius:100px;
+  box-shadow:0 6px 18px rgba(255,140,26,.5);transform:rotate(3deg);
+}
+
+/* ===== Услуги ===== */
+.svc-grid{display:grid;gap:16px}
+.svc-card{
+  background:var(--card);backdrop-filter:blur(14px);border-radius:var(--r-lg);
+  border:1px solid transparent;
+  background-clip:padding-box;
+  position:relative;overflow:hidden;
+  transition:transform .25s,border-color .25s,box-shadow .25s;
+}
+.svc-card::before{
+  content:"";position:absolute;inset:0;border-radius:var(--r-lg);padding:1.5px;
+  background:linear-gradient(140deg,rgba(255,140,26,.65),transparent 40%,transparent 60%,rgba(255,194,71,.4));
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;
+}
+.svc-card:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 30px rgba(255,140,26,.15)}
+.svc-head{display:flex;gap:16px;align-items:flex-start;padding:24px 22px;cursor:pointer;width:100%;text-align:left;background:none;border:none;font:inherit;color:inherit}
+.svc-head:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.svc-ico{
+  width:54px;height:54px;border-radius:14px;flex:none;
+  background:linear-gradient(135deg,rgba(255,140,26,.2),rgba(255,140,26,.05));
+  border:1px solid rgba(255,140,26,.35);color:var(--accent);
+  display:grid;place-items:center;
+}
+.svc-head h3{font-size:18px;font-weight:800}
+.svc-head .hint{color:var(--muted);font-size:14px;margin-top:3px}
+.svc-chev{margin-left:auto;flex:none;color:var(--muted);transition:transform .3s;align-self:center}
+.svc-card.open .svc-chev{transform:rotate(180deg);color:var(--accent)}
+.svc-body{max-height:0;overflow:hidden;transition:max-height .45s ease}
+.svc-body-in{padding:0 22px 24px;color:var(--muted);font-size:15px}
+.svc-body-in .btn{margin-top:16px}
+.svc-card.hit .hit-tag{
+  position:absolute;top:0;right:0;z-index:2;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));color:#1a1205;
+  font-size:12px;font-weight:800;letter-spacing:.08em;padding:6px 16px;
+  border-radius:0 var(--r-lg) 0 16px;box-shadow:0 6px 18px rgba(255,140,26,.5);
+}
+.svc-card.hit{background:linear-gradient(160deg,rgba(255,140,26,.13),var(--card))}
+
+/* ===== Таймлайн ===== */
+#steps{background:var(--bg2);border-block:1px solid var(--line)}
+.tl{position:relative;max-width:760px;margin:0 auto}
+.tl::before{
+  content:"";position:absolute;left:27px;top:10px;bottom:10px;width:3px;border-radius:3px;
+  background:var(--line);
+}
+.tl-fill{
+  position:absolute;left:27px;top:10px;width:3px;border-radius:3px;height:0;
+  background:linear-gradient(var(--accent),var(--accent2));
+  box-shadow:0 0 16px rgba(255,140,26,.6);
+  transition:height .6s ease;
+}
+.tl-step{position:relative;padding:0 0 34px 76px}
+.tl-step:last-child{padding-bottom:0}
+.tl-dot{
+  position:absolute;left:0;top:2px;width:57px;height:57px;border-radius:50%;
+  background:var(--bg3);border:2px solid var(--line);
+  display:grid;place-items:center;color:var(--muted);font-weight:800;
+  transition:border-color .4s,color .4s,box-shadow .4s;
+}
+.tl-step.on .tl-dot{
+  border-color:var(--accent);color:var(--accent);
+  box-shadow:0 0 22px rgba(255,140,26,.45);
+}
+.tl-step h3{font-size:18px;font-weight:800;padding-top:6px}
+.tl-step p{color:var(--muted);font-size:15px;margin-top:4px}
+
+/* ===== Сезон ===== */
+#season{overflow:hidden}
+.season-box{
+  background:var(--card);backdrop-filter:blur(14px);border:1px solid var(--line);
+  border-radius:var(--r-lg);padding:30px 22px;text-align:center;
+  position:relative;overflow:hidden;
+}
+.season-box::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(480px 260px at 50% 0,rgba(255,140,26,.12),transparent 70%);
+}
+.season-switch{
+  display:inline-flex;background:rgba(255,255,255,.06);border:1px solid var(--line);
+  border-radius:100px;padding:5px;margin:18px 0 16px;position:relative;
+}
+.season-switch .thumb{
+  position:absolute;top:5px;left:5px;width:calc(50% - 5px);height:calc(100% - 10px);
+  border-radius:100px;background:linear-gradient(135deg,var(--accent),var(--accent2));
+  transition:transform .3s ease;box-shadow:0 4px 14px rgba(255,140,26,.4);
+}
+.season-switch button{
+  position:relative;z-index:1;background:none;border:none;font:inherit;font-weight:800;
+  font-size:15px;color:var(--muted);padding:11px 26px;cursor:pointer;min-width:110px;
+  transition:color .3s;
+}
+.season-switch button[aria-pressed="true"]{color:#1a1205}
+.season-switch button:focus-visible{outline:2px solid var(--accent2)}
+.season-tip{
+  min-height:76px;color:var(--muted);font-size:16px;max-width:560px;margin:0 auto 18px;
+  position:relative;
+}
+.season-tip b{color:var(--text)}
+.season-icon{font-size:44px;line-height:1;margin-bottom:6px}
+
+/* ===== Конструктор заявки ===== */
+#booking{background:var(--bg2);border-block:1px solid var(--line)}
+.form-card{
+  background:var(--card);backdrop-filter:blur(14px);border:1px solid var(--line);
+  border-radius:var(--r-lg);padding:26px 22px;
+}
+.form-grid{display:grid;gap:22px}
+.f-group legend,.f-group .lbl{
+  display:block;font-weight:800;font-size:14px;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:10px;
+}
+.f-group{border:none}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg button{
+  background:rgba(255,255,255,.05);border:1.5px solid var(--line);color:var(--text);
+  font:inherit;font-weight:700;font-size:15px;padding:12px 20px;border-radius:14px;cursor:pointer;
+  min-height:48px;transition:border-color .2s,background .2s,color .2s;
+}
+.seg button:hover{border-color:rgba(255,140,26,.5)}
+.seg button[aria-pressed="true"]{
+  border-color:var(--accent);background:rgba(255,140,26,.14);color:var(--accent);
+  box-shadow:0 0 16px rgba(255,140,26,.25);
+}
+.seg button:focus-visible{outline:2px solid var(--accent2);outline-offset:2px}
+#client-name{
+  width:100%;background:rgba(255,255,255,.05);border:1.5px solid var(--line);color:var(--text);
+  font:inherit;font-size:16px;padding:14px 16px;border-radius:14px;min-height:52px;
+  transition:border-color .2s;
+}
+#client-name:focus{outline:none;border-color:var(--accent);box-shadow:0 0 16px rgba(255,140,26,.25)}
+#client-name::placeholder{color:var(--muted)}
+.preview-box{
+  background:rgba(0,0,0,.28);border:1px dashed rgba(255,140,26,.45);border-radius:var(--r);
+  padding:16px;margin-top:20px;
+}
+.preview-box .pl{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:800;margin-bottom:8px}
+#msg-preview{white-space:pre-wrap;font-size:15px;color:var(--text);min-height:100px}
+.form-actions{display:grid;gap:10px;margin-top:16px}
+
+/* ===== Проверка шин ===== */
+#tire-check{background:radial-gradient(900px 520px at 85% 0%,rgba(255,140,26,.08),transparent 60%),var(--bg2);border-block:1px solid var(--line)}
+.tc-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.tc-card{
+  background:var(--card);backdrop-filter:blur(14px);border-radius:var(--r-lg);
+  border:1px solid var(--line);padding:24px 22px;
+  display:flex;flex-direction:column;gap:12px;
+  transition:border-color .25s,box-shadow .25s;
+}
+.tc-card:hover{border-color:rgba(255,140,26,.55);box-shadow:0 22px 60px rgba(0,0,0,.45),0 0 34px rgba(255,140,26,.18)}
+.tc-ico{
+  width:56px;height:56px;border-radius:16px;flex:none;
+  background:linear-gradient(135deg,rgba(255,140,26,.22),rgba(255,140,26,.06));
+  border:1px solid rgba(255,140,26,.4);color:var(--accent);
+  display:grid;place-items:center;filter:drop-shadow(0 0 12px rgba(255,140,26,.5));
+}
+.tc-card h3{font-size:18.5px;font-weight:800}
+.tc-card p{color:var(--muted);font-size:15px;flex:1}
+.tc-fig{width:100%;height:auto;border-radius:var(--r);background:rgba(0,0,0,.25);border:1px solid var(--line);margin-top:2px}
+.tc-norms{
+  margin-top:26px;background:var(--card);backdrop-filter:blur(14px);
+  border:1px solid var(--line);border-radius:var(--r-lg);padding:22px 22px 18px;max-width:640px;
+}
+.tc-norms-head{font-weight:800;font-size:15px;margin-bottom:12px;letter-spacing:.02em}
+.tc-norms-rows{display:grid;gap:8px}
+.tc-norm{
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+  background:rgba(0,0,0,.22);border:1px solid var(--line);border-radius:var(--r);
+  padding:12px 16px;font-size:15px;
+}
+.tc-norm span{color:var(--muted);font-weight:600}
+.tc-norm b{font-size:16px;color:var(--accent2)}
+.tc-norms-note{color:var(--muted);font-size:13.5px;margin-top:12px}
+.tc-check{
+  margin-top:26px;background:var(--card);backdrop-filter:blur(14px);
+  border:1px solid var(--line);border-radius:var(--r-lg);padding:26px 22px;max-width:640px;
+}
+.tc-check h3{font-size:19px;font-weight:800}
+.tc-check-sub{color:var(--muted);font-size:14.5px;margin-top:4px}
+.tc-opts{display:grid;gap:10px;margin-top:16px}
+.tc-opt{
+  display:flex;align-items:center;gap:14px;cursor:pointer;
+  background:rgba(0,0,0,.22);border:1px solid var(--line);border-radius:var(--r);
+  padding:15px 16px;min-height:56px;
+  transition:border-color .2s,background .2s;
+}
+.tc-opt:hover,.tc-opt:focus-within{border-color:rgba(255,140,26,.5);background:rgba(255,140,26,.07)}
+.tc-box{
+  appearance:none;-webkit-appearance:none;width:26px;height:26px;flex:none;
+  border:2px solid rgba(255,255,255,.25);border-radius:8px;background:rgba(0,0,0,.3);
+  display:grid;place-items:center;cursor:pointer;position:relative;
+  transition:border-color .2s,background .2s;
+}
+.tc-box:hover{border-color:var(--accent)}
+.tc-box:focus-visible{outline:3px solid var(--accent2);outline-offset:2px}
+.tc-box:checked{background:linear-gradient(135deg,var(--accent),var(--accent2));border-color:var(--accent)}
+.tc-box:checked::after{
+  content:"";width:14px;height:14px;
+  clip-path:polygon(14% 44%,0 65%,50% 100%,100% 8%,80% 0%,43% 62%);
+  background:#1a1205;
+}
+.tc-opt span{font-size:15.5px;font-weight:600}
+.tc-result{
+  margin-top:18px;border-radius:var(--r);padding:16px 18px;
+  border:1px solid var(--line);background:rgba(0,0,0,.22);
+  transition:border-color .35s ease,background .35s ease;
+}
+.tc-result-text{font-size:15.5px;font-weight:700;line-height:1.4}
+.tc-result.level-0{border-color:rgba(74,222,128,.45);background:rgba(74,222,128,.10)}
+.tc-result.level-1{border-color:rgba(255,194,71,.5);background:rgba(255,194,71,.10)}
+.tc-result.level-2{border-color:rgba(255,107,87,.55);background:rgba(255,107,87,.10)}
+.tc-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.tc-final{
+  margin-top:26px;color:var(--muted);font-size:15.5px;font-weight:600;text-align:center;
+}
+@media (min-width:860px){.tc-grid{grid-template-columns:repeat(3,1fr)}}
+.tc-card:nth-child(1){transition-delay:0s}
+.tc-card:nth-child(2){transition-delay:.15s}
+.tc-card:nth-child(3){transition-delay:.3s}
+.tc-norms.reveal{transition-delay:.1s}
+.tc-check.reveal{transition-delay:.15s}
+
+/* ===== Отзывы ===== */
+#reviews{overflow:hidden}
+.big-rating{
+  background:var(--card);backdrop-filter:blur(14px);border:1px solid var(--line);
+  border-radius:var(--r-lg);padding:40px 24px;text-align:center;max-width:640px;margin:0 auto;
+  position:relative;
+}
+.big-rating .num{
+  font-size:clamp(56px,12vw,88px);font-weight:800;line-height:1;
+  color:transparent;background:linear-gradient(120deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;background-clip:text;
+  filter:drop-shadow(0 0 24px rgba(255,140,26,.4));
+}
+.big-rating .stars{font-size:24px;display:block;margin:10px 0 8px}
+.big-rating p{color:var(--muted);margin-bottom:22px}
+
+/* ===== FAQ ===== */
+#faq{background:var(--bg2);border-block:1px solid var(--line)}
+.faq-item{
+  background:var(--card);backdrop-filter:blur(12px);border:1px solid var(--line);
+  border-radius:var(--r);margin-bottom:12px;overflow:hidden;
+}
+.faq-q{
+  display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%;
+  background:none;border:none;font:inherit;font-weight:800;font-size:16.5px;color:var(--text);
+  padding:19px 20px;cursor:pointer;text-align:left;
+}
+.faq-q:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.faq-q .chev{flex:none;color:var(--muted);transition:transform .3s,color .3s}
+.faq-item.open .chev{transform:rotate(45deg);color:var(--accent)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-a-in{padding:0 20px 20px;color:var(--muted);font-size:15.5px}
+.faq-a-in a{border-bottom:1px dashed rgba(255,140,26,.5)}
+
+/* ===== Контакты / карта-карточка ===== */
+.contact-grid{display:grid;gap:16px}
+.info-block{
+  background:var(--card);backdrop-filter:blur(14px);border:1px solid var(--line);
+  border-radius:var(--r-lg);padding:26px 22px;
+}
+.info-block h3{font-size:18px;font-weight:800;margin-bottom:14px}
+.irow{display:flex;gap:12px;align-items:flex-start;color:var(--muted);margin:10px 0;font-size:15.5px}
+.irow svg{color:var(--accent);flex:none;margin-top:2px;filter:drop-shadow(0 0 8px rgba(255,140,26,.5))}
+.irow a{color:var(--text)}
+.irow a:hover{color:var(--accent)}
+.irow b{color:var(--text)}
+.contact-btns{display:grid;gap:10px;margin-top:18px}
+.map-card{
+  position:relative;overflow:hidden;min-height:300px;border-radius:var(--r-lg);
+  border:1px solid var(--line);
+  background:
+    radial-gradient(340px 200px at 78% 24%,rgba(255,140,26,.16),transparent 65%),
+    linear-gradient(160deg,#1a1d23,#131519);
+}
+.map-grid{
+  position:absolute;inset:0;opacity:.5;
+  background-image:
+    linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:44px 44px;
+}
+.map-road{position:absolute;left:-8%;right:-8%;top:52%;height:14px;background:rgba(255,255,255,.06);border-radius:8px;transform:rotate(-7deg)}
+.map-road.dash{
+  height:3px;overflow:hidden;
+  background-image:repeating-linear-gradient(90deg,rgba(255,140,26,.7) 0 26px,transparent 26px 52px);
+}
+.map-pin{
+  position:absolute;left:50%;top:50%;translate:-50% -92%;
+  display:flex;flex-direction:column;align-items:center;
+  animation:pinfloat 3s ease-in-out infinite;
+}
+@keyframes pinfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.map-pin .head{
+  width:46px;height:46px;border-radius:50% 50% 50% 0;rotate:45deg;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  display:grid;place-items:center;box-shadow:0 0 30px rgba(255,140,26,.65);
+}
+.map-pin .head svg{rotate:-45deg;color:#1a1205}
+.map-pin .pulse{
+  width:64px;height:64px;border-radius:50%;margin-top:-18px;
+  background:radial-gradient(circle,rgba(255,140,26,.35),transparent 65%);
+  animation:mapulse 2.2s ease-out infinite;
+}
+@keyframes mapulse{0%{transform:scale(.5);opacity:1}100%{transform:scale(1.7);opacity:0}}
+.map-label{
+  position:absolute;left:12px;right:12px;bottom:12px;
+  background:rgba(16,18,22,.85);backdrop-filter:blur(10px);
+  border:1px solid var(--line);border-radius:var(--r);
+  padding:12px 16px;font-size:14px;color:var(--muted);
+}
+.map-label b{color:var(--text)}
+
+/* ===== Финальный CTA ===== */
+#cta{padding:80px 0}
+.cta-box{
+  position:relative;overflow:hidden;text-align:center;
+  border-radius:var(--r-lg);padding:56px 24px;
+  background:linear-gradient(150deg,rgba(255,140,26,.16),rgba(255,194,71,.05) 55%),var(--bg3);
+  border:1px solid rgba(255,140,26,.35);
+  box-shadow:0 30px 80px rgba(0,0,0,.5),0 0 60px rgba(255,140,26,.14);
+}
+.cta-box::before{
+  content:"";position:absolute;inset:-40%;
+  background:conic-gradient(from 0deg,transparent 0 78%,rgba(255,140,26,.12) 88%,transparent 100%);
+  animation:ctarot 9s linear infinite;
+}
+@keyframes ctarot{to{transform:rotate(360deg)}}
+.cta-box>*{position:relative}
+.cta-box h2{font-size:clamp(26px,5.2vw,42px);font-weight:800;line-height:1.15}
+.cta-box h2 em{font-style:normal;color:var(--accent);text-shadow:0 0 30px rgba(255,140,26,.5)}
+.cta-box p{color:var(--muted);margin:14px 0 28px;max-width:520px;margin-inline:auto}
+.cta-btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.cta-btns .btn-accent{animation:pulse 2.6s ease-in-out infinite}
+@keyframes pulse{
+  0%,100%{box-shadow:0 8px 30px rgba(255,140,26,.35)}
+  50%{box-shadow:0 8px 44px rgba(255,140,26,.65),0 0 60px rgba(255,140,26,.3)}
+}
+
+/* ===== Футер ===== */
+footer{background:#0c0d10;border-top:1px solid var(--line);padding:30px 0 28px;color:var(--muted);font-size:15px}
+.f-row{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center}
+.f-row+.f-row{margin-top:10px}
+footer a{color:var(--text);font-weight:600}
+footer a:hover{color:var(--accent)}
+.f-social{display:flex;gap:10px}
+.f-social a{
+  width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
+  background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--text);
+  transition:border-color .2s,color .2s,box-shadow .2s;
+}
+.f-social a:hover{border-color:var(--accent);color:var(--accent);box-shadow:0 0 18px rgba(255,140,26,.3)}
+
+/* ===== Нижняя панель (мобильные) ===== */
+#bottom-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:800;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:8px;
+  padding:10px 12px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(12,13,16,.92);backdrop-filter:blur(16px);
+  border-top:1px solid var(--line);
+}
+#bottom-bar a{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+  min-height:56px;border-radius:14px;font-size:12px;font-weight:700;color:var(--text);
+}
+#bottom-bar .bb-call{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#1a1205}
+#bottom-bar .bb-wa{background:var(--wa)}
+#bottom-bar .bb-tg{background:var(--tg)}
+
+/* ===== Плавающая кнопка (десктоп) ===== */
+#fab-wrap{position:fixed;right:26px;bottom:26px;z-index:850;display:none}
+#fab{
+  width:62px;height:62px;border-radius:50%;border:none;cursor:pointer;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));color:#1a1205;
+  display:grid;place-items:center;box-shadow:0 10px 34px rgba(255,140,26,.5);
+  animation:pulse 2.6s ease-in-out infinite;
+  transition:transform .3s;
+}
+#fab:focus-visible{outline:3px solid var(--accent2);outline-offset:3px}
+#fab-wrap.open #fab{transform:rotate(135deg)}
+#fab-menu{
+  position:absolute;bottom:74px;right:0;display:grid;gap:10px;
+  opacity:0;pointer-events:none;transform:translateY(12px);
+  transition:opacity .3s,transform .3s;
+}
+#fab-wrap.open #fab-menu{opacity:1;pointer-events:auto;transform:translateY(0)}
+#fab-menu a{
+  display:flex;align-items:center;gap:10px;background:rgba(22,24,29,.95);
+  border:1px solid var(--line);border-radius:16px;padding:12px 18px;
+  color:var(--text);font-weight:700;font-size:15px;white-space:nowrap;
+  backdrop-filter:blur(10px);transition:border-color .2s;
+}
+#fab-menu a:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ===== Кнопка «Наверх» ===== */
+#to-top{
+  position:fixed;left:18px;bottom:calc(90px + env(safe-area-inset-bottom));z-index:840;
+  width:48px;height:48px;border-radius:50%;border:1px solid var(--line);cursor:pointer;
+  background:rgba(22,24,29,.9);backdrop-filter:blur(10px);color:var(--text);
+  display:grid;place-items:center;
+  opacity:0;pointer-events:none;transform:translateY(10px);
+  transition:opacity .3s,transform .3s,border-color .2s,color .2s;
+}
+#to-top.show{opacity:1;pointer-events:auto;transform:none}
+#to-top:hover{border-color:var(--accent);color:var(--accent)}
+#to-top:focus-visible{outline:2px solid var(--accent)}
+
+/* ===== Desktop ===== */
+@media (min-width:900px){
+  #nav{display:flex;gap:2px}
+  #burger{display:none}
+  #bottom-bar{display:none}
+  body{padding-bottom:0}
+  #fab-wrap{display:block}
+  #to-top{left:auto;right:34px;bottom:110px}
+  section{padding:96px 0}
+  .stats-grid{grid-template-columns:repeat(4,1fr)}
+  .why-grid{grid-template-columns:repeat(3,1fr)}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1.05fr 1fr}
+  .form-grid{grid-template-columns:1fr 1fr;gap:26px}
+  .form-card{padding:38px 36px}
+  .form-actions{grid-template-columns:1fr 1fr}
+  .hero-wheel{right:-60px;opacity:.65}
+  .cta-box{padding:80px 40px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div id="cursor-glow" aria-hidden="true"></div>
+<div id="scroll-progress" aria-hidden="true"></div>
+
+<!-- ===== Шапка ===== -->
+<header id="site-header">
+  <div class="wrap head-row">
+    <a class="logo" href="#hero" aria-label="Автосервис — на главный экран">
+      <span class="mark" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3"/></svg></span>
+      Авто<span style="color:var(--accent)">сервис</span>
+    </a>
+    <nav id="nav" aria-label="Основное меню">
+      <a href="#why">Почему мы</a>
+      <a href="#tire-check">Проверка шин</a>
+      <a href="#services">Услуги</a>
+      <a href="#steps">Как работаем</a>
+      <a href="#booking">Запись</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="btn btn-accent head-call" href="tel:+79373903198">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Позвонить
+    </a>
+    <button id="burger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div id="mobile-menu">
+  <a href="#why">Почему мы</a>
+  <a href="#services">Услуги</a>
+  <a href="#tire-check">Проверка шин</a>
+  <a href="#steps">Как работаем</a>
+  <a href="#booking">Запись</a>
+  <a href="#reviews">Отзывы</a>
+  <a href="#contacts">Контакты</a>
+</div>
+
+<main>
+<!-- ===== Первый экран ===== -->
+<section id="hero">
+  <div id="hero-bg" aria-hidden="true">
+    <div class="tread"></div>
+    <div class="blob blob-1" data-parallax="0.12"></div>
+    <div class="blob blob-2" data-parallax="0.08"></div>
+  </div>
+  <svg class="hero-wheel" aria-hidden="true" viewBox="0 0 200 200">
+    <g class="spin">
+      <circle cx="100" cy="100" r="94" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="10"/>
+      <circle cx="100" cy="100" r="94" fill="none" stroke="rgba(255,140,26,.5)" stroke-width="3" stroke-dasharray="30 18"/>
+      <circle cx="100" cy="100" r="60" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="8"/>
+      <circle cx="100" cy="100" r="34" fill="none" stroke="rgba(255,255,255,.16)" stroke-width="4" stroke-dasharray="12 9"/>
+      <g stroke="rgba(255,255,255,.14)" stroke-width="5">
+        <path d="M100 6v34M100 160v34M6 100h34M160 100h34M33 33l24 24M143 143l24 24M167 33l-24 24M57 143l-24 24"/>
+      </g>
+      <circle cx="100" cy="100" r="12" fill="rgba(255,140,26,.55)"/>
+    </g>
+  </svg>
+  <div class="wrap hero-grid">
+    <div class="hero-badge" id="open-badge">
+      <span class="lamp" aria-hidden="true"></span>
+      <span id="open-text">Проверяем график…</span>
+    </div>
+    <h1>Шиномонтаж в Чебоксарах: <em>быстро, аккуратно, без очередей</em></h1>
+    <p class="sub">Легковые авто и Газели в отапливаемом боксе. Ежедневно 08:00–19:00.</p>
+    <div class="hero-cta">
+      <a class="btn btn-accent" href="tel:+79373903198">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Позвонить
+      </a>
+      <a class="btn btn-wa" href="https://api.whatsapp.com/send/?phone=79373903198&amp;text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%0A%0A%D0%9F%D0%B8%D1%88%D1%83+%D0%B8%D0%B7+%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F+2%D0%93%D0%98%D0%A1.%0A%0A&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.43 12.38c-.3.7-1.43 1.33-2 1.42-.51.07-1.16.1-1.87-.12-.44-.14-.99-.33-1.7-.63-2.98-1.29-4.93-4.29-5.08-4.49-.15-.2-1.22-1.61-1.22-3.08 0-1.46.77-2.18 1.04-2.48.28-.3.6-.37.8-.37h.57c.18.01.43-.07.67.51.25.6.85 2.08.93 2.23.07.15.12.32.02.52-.1.2-.15.33-.3.5-.15.18-.5.55-.65.7-.15.15-.32.32-.15.62.17.3 1.53 2.05 1.7 2.12a8.35 8.35 0 0 0 2.46 1.52c.3.15.5.13.65-.07.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.73.82 2.03.97.29.15.49.23.57.35.07.13.07.72-.18 1.42z"/></svg>
+        WhatsApp
+      </a>
+      <a class="btn btn-tg" href="https://t.me/+79373903198" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.91 3.79 20.3 20.84c-.25 1.21-.98 1.5-2 .94l-5.5-4.07-2.66 2.57c-.3.3-.55.55-1.1.55-.55 0-.5-.2-.72-.71L6.3 13.69.85 12c-1.18-.35-1.19-1.16.25-1.72l18.44-7.1c1.03-.42 1.86.25 1.6 1.61z"/></svg>
+        Telegram
+      </a>
+    </div>
+    <p class="hero-rating">
+      <span class="stars" aria-hidden="true">★★★★★</span>
+      <span><strong>4,8</strong> в <a href="https://2gis.ru/cheboksary/geo/7459722537996284" target="_blank" rel="noopener">2ГИС</a> по 13 оценкам</span>
+      <span aria-hidden="true" style="color:var(--line)">•</span>
+      <a href="https://2gis.ru/cheboksary/geo/7459722537996284" target="_blank" rel="noopener">Ягодный переулок, 2а</a>
+    </p>
+  </div>
+</section>
+
+<!-- ===== Бегущая строка ===== -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>ОТАПЛИВАЕМЫЙ БОКС</span><span>•</span><span>ЛЕГКОВЫЕ И ГАЗЕЛИ</span><span>•</span><span>БЕСПЛАТНАЯ ДИАГНОСТИКА ХОДОВОЙ</span><span>•</span><span>БЕЗ ВЫХОДНЫХ</span><span>•</span><span>08:00–19:00</span><span>•</span>
+    <span>ОТАПЛИВАЕМЫЙ БОКС</span><span>•</span><span>ЛЕГКОВЫЕ И ГАЗЕЛИ</span><span>•</span><span>БЕСПЛАТНАЯ ДИАГНОСТИКА ХОДОВОЙ</span><span>•</span><span>БЕЗ ВЫХОДНЫХ</span><span>•</span><span>08:00–19:00</span><span>•</span>
+  </div>
+</div>
+
+<!-- ===== Цифры ===== -->
+<section id="stats">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat reveal"><b><span class="counter" data-to="7">7</span></b><span>дней в неделю, без выходных</span></div>
+      <div class="stat reveal"><b><span class="counter" data-to="11">11</span></b><span>часов работы каждый день</span></div>
+      <div class="stat reveal"><b><span class="counter" data-to="4.8" data-dec="1">4,8</span></b><span>рейтинг в 2ГИС по 13 оценкам</span></div>
+      <div class="stat reveal"><b><span class="counter" data-to="2">2</span></b><span>типа авто: легковые и Газели</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Почему мы ===== -->
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker">Почему мы</p>
+      <h2 class="sec-title">Почему выбирают нас</h2>
+      <p class="sec-lead">Никакой воды — только то, что важно вам и вашему авто.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card star reveal">
+        <span class="sticker">Хит</span>
+        <div class="why-top">
+          <span class="why-num">01</span>
+          <span class="why-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z"/></svg></span>
+        </div>
+        <h3>Отапливаемый бокс</h3>
+        <p>Работаем в комфорте в любую погоду — и вы, и резина в тепле.</p>
+        <a class="btn btn-accent" href="#booking">Записаться</a>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-top">
+          <span class="why-num">02</span>
+          <span class="why-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17h14M7 17V9l-3 3M17 17V5l-3 3"/><path d="M3 21h18"/></svg></span>
+        </div>
+        <h3>Легковые авто и Газели</h3>
+        <p>Оборудование и опыт под оба типа авто.</p>
+        <a class="btn btn-ghost" href="#booking">Записаться</a>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-top">
+          <span class="why-num">03</span>
+          <span class="why-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h3l2-5 3 10 3-7 2 2h5"/><rect x="2" y="4" width="20" height="16" rx="3"/></svg></span>
+        </div>
+        <h3>Бесплатная диагностика ходовой</h3>
+        <p>При комплексной замене колёс — проверим подвеску бесплатно.</p>
+        <a class="btn btn-ghost" href="#booking">Записаться</a>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-top">
+          <span class="why-num">04</span>
+          <span class="why-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M8 2v4M16 2v4M3 10h18"/></svg></span>
+        </div>
+        <h3>7 дней в неделю</h3>
+        <p>Работаем без выходных — заезжайте, когда удобно.</p>
+        <a class="btn btn-ghost" href="#booking">Записаться</a>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-top">
+          <span class="why-num">05</span>
+          <span class="why-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.26 6.6.57-5 4.37 1.5 6.47L12 16.5l-6 3.17 1.5-6.47-5-4.37 6.6-.57z"/></svg></span>
+        </div>
+        <h3>Высокий рейтинг в 2ГИС</h3>
+        <p><a href="https://2gis.ru/cheboksary/geo/7459722537996284" target="_blank" rel="noopener">4,8</a> по реальным отзывам клиентов.</p>
+        <a class="btn btn-ghost" href="#booking">Записаться</a>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-top">
+          <span class="why-num">06</span>
+          <span class="why-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.1-7-11a7 7 0 0 1 14 0c0 5.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+        </div>
+        <h3>Удобно добраться</h3>
+        <p>Рядом парковка и остановка «Кошкино» (~350 м).</p>
+        <a class="btn btn-ghost" href="#booking">Записаться</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Услуги ===== -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker">Услуги</p>
+      <h2 class="sec-title">Что мы делаем</h2>
+      <p class="sec-lead">Нажмите на услугу — покажем подробности. Цены назовём сразу по телефону или в мессенджере.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card hit reveal">
+        <span class="hit-tag">Выгодно</span>
+        <button class="svc-head" aria-expanded="false">
+          <span class="svc-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></span>
+          <span>
+            <h3>Комплексная замена колёс + диагностика ходовой</h3>
+            <span class="hint">Сезонная переобувка с бесплатной проверкой подвески</span>
+          </span>
+          <svg class="svc-chev" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="svc-body">
+          <div class="svc-body-in">
+            Полный цикл: снимаем колёса, меняем резину, балансируем и ставим на место. Заодно бесплатно проверим ходовую часть на подъёмнике. Для легковых авто и Газелей.
+            <a class="btn btn-wa svc-wa" href="#" data-service="Комплексная замена колёс + бесплатная диагностика ходовой">Узнать стоимость</a>
+          </div>
+        </div>
+      </div>
+      <div class="svc-card reveal">
+        <button class="svc-head" aria-expanded="false">
+          <span class="svc-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg></span>
+          <span>
+            <h3>Сезонная замена колёс</h3>
+            <span class="hint">«Лето ⇄ зима» быстро и аккуратно</span>
+          </span>
+          <svg class="svc-chev" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="svc-body">
+          <div class="svc-body-in">
+            Переобувка в отапливаемом боксе: не спешим, аккуратно с дисками, чисто с резиной. Легковые авто и Газели.
+            <a class="btn btn-wa svc-wa" href="#" data-service="Сезонная замена колёс">Узнать стоимость</a>
+          </div>
+        </div>
+      </div>
+      <div class="svc-card reveal">
+        <button class="svc-head" aria-expanded="false">
+          <span class="svc-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17h14M7 17V9l-3 3M17 17V5l-3 3"/><path d="M3 21h18"/></svg></span>
+          <span>
+            <h3>Шиномонтаж легковых авто</h3>
+            <span class="hint">Монтаж, демонтаж, ремонт проколов</span>
+          </span>
+          <svg class="svc-chev" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="svc-body">
+          <div class="svc-body-in">
+            Меняем и ремонтируем шины легковых авто: проколы, монтаж, демонтаж. Всё в тепле, при вас.
+            <a class="btn btn-wa svc-wa" href="#" data-service="Шиномонтаж легковых авто">Узнать стоимость</a>
+          </div>
+        </div>
+      </div>
+      <div class="svc-card reveal">
+        <button class="svc-head" aria-expanded="false">
+          <span class="svc-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="6" width="15" height="12" rx="2"/><path d="M16 9h4l3 3v6h-7"/><circle cx="5.5" cy="18.5" r="2"/><circle cx="19.5" cy="18.5" r="2"/></svg></span>
+          <span>
+            <h3>Шиномонтаж Газелей</h3>
+            <span class="hint">Крупные колёса, свой подход</span>
+          </span>
+          <svg class="svc-chev" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="svc-body">
+          <div class="svc-body-in">
+            Обслуживаем Газели: оборудование и опыт под грузовые колёса. Монтаж, демонтаж, ремонт.
+            <a class="btn btn-wa svc-wa" href="#" data-service="Шиномонтаж Газелей">Узнать стоимость</a>
+          </div>
+        </div>
+      </div>
+      <div class="svc-card reveal">
+        <button class="svc-head" aria-expanded="false">
+          <span class="svc-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg></span>
+          <span>
+            <h3>Балансировка</h3>
+            <span class="hint">Ровный ход без биения</span>
+          </span>
+          <svg class="svc-chev" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="svc-body">
+          <div class="svc-body-in">
+            Отбалансируем колёса после установки — руль не бьёт, машина идёт ровно. Для любых колёс из наших услуг.
+            <a class="btn btn-wa svc-wa" href="#" data-service="Балансировка">Узнать стоимость</a>
+          </div>
+        </div>
+      </div>
+      <div class="svc-card reveal">
+        <button class="svc-head" aria-expanded="false">
+          <span class="svc-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h3l2-5 3 10 3-7 2 2h5"/><rect x="2" y="4" width="20" height="16" rx="3"/></svg></span>
+          <span>
+            <h3>Диагностика ходовой части</h3>
+            <span class="hint">Бесплатно при замене колёс</span>
+          </span>
+          <svg class="svc-chev" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="svc-body">
+          <div class="svc-body-in">
+            Проверим подвеску на подъёмнике при вас. Бесплатно при комплексной замене колёс.
+            <a class="btn btn-wa svc-wa" href="#" data-service="Диагностика ходовой части">Узнать стоимость</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Проверка шин ===== -->
+<section id="tire-check">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker">Проверка шин</p>
+      <h2 class="sec-title">Проверьте шины за минуту</h2>
+      <p class="sec-lead">Три способа, без инструментов. Результат сразу видно.</p>
+    </div>
+    <div class="tc-grid">
+      <div class="tc-card reveal">
+        <div class="tc-ico"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3c1.5 3 1.5 6 0 9s-1.5 6 0 9"/><path d="M3 12h18"/></svg></div>
+        <h3>Монета в канавку</h3>
+        <p>Вставьте монету в самую глубокую канавку протектора. Если рисунок едва закрывает край монеты — шины изношены.</p>
+        <svg class="tc-fig" viewBox="0 0 220 120" role="img" aria-label="Разрез шины с монетой в канавке протектора">
+          <defs>
+            <linearGradient id="tcRub" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#3a3f49"/><stop offset="1" stop-color="#23272f"/>
+            </linearGradient>
+            <linearGradient id="tcCoin" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#ffc247"/><stop offset="1" stop-color="#ff8c1a"/>
+            </linearGradient>
+          </defs>
+          <path d="M10 88 Q14 60 40 55 L180 55 Q206 60 210 88 Q206 112 180 116 L40 116 Q14 112 10 88 Z" fill="url(#tcRub)" stroke="rgba(255,255,255,.25)" stroke-width="2"/>
+          <path d="M14 74 Q16 62 40 59 L180 59 Q204 62 206 74" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="4"/>
+          <path d="M18 90 L34 76 M40 92 L52 78 M64 93 L74 79 M90 94 L100 79 M116 94 L126 79 M142 93 L154 78 M166 92 L178 77 M186 90 L198 76" stroke="rgba(255,255,255,.18)" stroke-width="3" stroke-linecap="round" aria-hidden="true"/>
+          <circle cx="110" cy="86" r="14" fill="url(#tcCoin)"/>
+          <circle cx="110" cy="86" r="10" fill="none" stroke="rgba(26,18,5,.45)" stroke-width="2"/>
+          <text x="110" y="91" text-anchor="middle" font-size="9" font-weight="800" fill="#1a1205" font-family="Arial">10</text>
+        </svg>
+      </div>
+      <div class="tc-card reveal">
+        <div class="tc-ico"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l3 5h-6l3-5z"/><path d="M12 21a9 9 0 0 0 9-9c0-2-1-4-3-5"/><path d="M12 21a9 9 0 0 1-9-9c0-2 1-4 3-5"/></svg></div>
+        <h3>Индикаторы износа (TWI)</h3>
+        <p>На боковине шины есть метки — треугольник или надпись TWI. Если протектор сравнялся с выступом в канавке, шины пора менять.</p>
+        <svg class="tc-fig" viewBox="0 0 220 120" role="img" aria-label="Боковина шины с индикатором износа TWI">
+          <defs>
+            <linearGradient id="tcRub2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#3a3f49"/><stop offset="1" stop-color="#23272f"/>
+            </linearGradient>
+          </defs>
+          <path d="M40 116 Q14 110 12 84 Q14 56 42 52 L178 52 Q206 56 208 84 Q206 110 180 116 Z" fill="url(#tcRub2)" stroke="rgba(255,255,255,.25)" stroke-width="2"/>
+          <path d="M18 84 Q20 66 44 63 L176 63 Q200 66 202 84" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="4"/>
+          <path d="M22 96 L36 84 M50 100 L60 87 M78 102 L88 88 M104 103 L114 88 M130 102 L142 87 M156 100 L168 85 M184 96 L196 83" stroke="rgba(255,255,255,.18)" stroke-width="3" stroke-linecap="round" aria-hidden="true"/>
+          <path d="M96 63 L110 50 L124 63 Z" fill="none" stroke="#ffc247" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M110 63 L110 90" stroke="#ffc247" stroke-width="2" stroke-dasharray="3 3"/>
+          <rect x="152" y="55" width="34" height="12" rx="3" fill="rgba(255,194,71,.15)" stroke="#ffc247" stroke-width="1.5"/>
+          <text x="169" y="64" text-anchor="middle" font-size="8" font-weight="800" fill="#ffc247" font-family="Arial">TWI</text>
+        </svg>
+      </div>
+      <div class="tc-card reveal">
+        <div class="tc-ico"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 14c1-2 7-2 8 0"/><path d="M9 9l1.5 1.5M15 9l-1.5 1.5M12 7v2"/></svg></div>
+        <h3>Осмотр по всей шине</h3>
+        <p>Трещины, вздутия, порезы, неровный износ с одной стороны, вибрация руля. Любой такой признак — шину нужно показать мастеру.</p>
+        <svg class="tc-fig" viewBox="0 0 220 120" role="img" aria-label="Шина с трещиной и вздутием как признаки износа">
+          <defs>
+            <linearGradient id="tcRub3" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#3a3f49"/><stop offset="1" stop-color="#23272f"/>
+            </linearGradient>
+          </defs>
+          <path d="M40 116 Q14 110 12 84 Q14 56 42 52 L178 52 Q206 56 208 84 Q206 110 180 116 Z" fill="url(#tcRub3)" stroke="rgba(255,255,255,.25)" stroke-width="2"/>
+          <path d="M18 84 Q20 66 44 63 L176 63 Q200 66 202 84" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="4"/>
+          <path d="M60 90 q6 -14 12 0 M150 90 q6 -14 12 0" fill="none" stroke="#ff6b57" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M100 88 q5 8 0 14 q-5 6 -10 2" fill="none" stroke="#ff6b57" stroke-width="2.5" stroke-linecap="round"/>
+          <ellipse cx="118" cy="63" rx="10" ry="6" fill="rgba(255,107,87,.4)" stroke="#ff6b57" stroke-width="2"/>
+          <circle cx="118" cy="63" r="2.5" fill="#ff6b57"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="tc-norms reveal" role="table" aria-label="Нормы остаточной глубины протектора">
+      <div class="tc-norms-head">Минимум по правилам</div>
+      <div class="tc-norms-rows">
+        <div class="tc-norm" role="row"><span role="cell">Летние шины</span><b role="cell">не менее 1,6 мм</b></div>
+        <div class="tc-norm" role="row"><span role="cell">Зимние шины</span><b role="cell">не менее 4 мм</b></div>
+      </div>
+      <p class="tc-norms-note">Это минимум по правилам. На практике менять лучше раньше, особенно перед сезоном.</p>
+    </div>
+
+    <div class="tc-check reveal">
+      <h3>Мои шины: быстрый чек-лист</h3>
+      <p class="tc-check-sub">Отметьте, что подходит вам:</p>
+      <div class="tc-opts">
+        <label class="tc-opt"><input type="checkbox" class="tc-box"><span>Рисунок протектора почти сровнялся</span></label>
+        <label class="tc-opt"><input type="checkbox" class="tc-box"><span>Есть трещины или вздутия</span></label>
+        <label class="tc-opt"><input type="checkbox" class="tc-box"><span>Руль вибрирует на скорости</span></label>
+        <label class="tc-opt"><input type="checkbox" class="tc-box"><span>Шинам больше 6 лет</span></label>
+      </div>
+      <div class="tc-result level-0" id="tc-result" aria-live="polite">
+        <p class="tc-result-text" id="tc-result-text">Пока всё хорошо. Проверьте снова через месяц.</p>
+      </div>
+      <div class="tc-actions">
+        <a class="btn btn-wa" href="https://api.whatsapp.com/send/?phone=79373903198&amp;text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%0A%0A%D0%9F%D0%B8%D1%88%D1%83%20%D0%B8%D0%B7%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%202%D0%93%D0%98%D0%A1.%0A%0A&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener">Записаться в WhatsApp</a>
+        <a class="btn btn-accent" href="tel:+79373903198">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Позвонить
+        </a>
+      </div>
+    </div>
+
+    <p class="tc-final reveal">Не уверены? Приезжайте — мастер посмотрит и подскажет.</p>
+  </div>
+</section>
+
+<!-- ===== Как работаем ===== -->
+<section id="steps">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker">Как работаем</p>
+      <h2 class="sec-title">Пять шагов до готового авто</h2>
+      <p class="sec-lead">Без суеты и ожидания — процесс понятен с первой минуты.</p>
+    </div>
+    <div class="tl">
+      <div class="tl-fill" id="tl-fill"></div>
+      <div class="tl-step" data-step="1">
+        <span class="tl-dot">1</span>
+        <h3>Позвонили или написали</h3>
+        <p>Уточним, что нужно, и когда вам удобно заехать.</p>
+      </div>
+      <div class="tl-step" data-step="2">
+        <span class="tl-dot">2</span>
+        <h3>Приехали в удобное время</h3>
+        <p>Ежедневно 08:00–19:00, рядом парковка.</p>
+      </div>
+      <div class="tl-step" data-step="3">
+        <span class="tl-dot">3</span>
+        <h3>Осмотр колёс</h3>
+        <p>Смотрим состояние резины и дисков при вас.</p>
+      </div>
+      <div class="tl-step" data-step="4">
+        <span class="tl-dot">4</span>
+        <h3>Замена и балансировка</h3>
+        <p>Работаем в отапливаемом боксе — аккуратно и без спешки.</p>
+      </div>
+      <div class="tl-step" data-step="5">
+        <span class="tl-dot">5</span>
+        <h3>Проверка и готово</h3>
+        <p>Финальная проверка — и вы на дороге.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Сезон ===== -->
+<section id="season">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker">Сезон</p>
+      <h2 class="sec-title">Пора переобуваться?</h2>
+    </div>
+    <div class="season-box reveal">
+      <div class="season-icon" id="season-icon" aria-hidden="true">❄️</div>
+      <div class="season-switch" role="group" aria-label="Выбор сезона">
+        <span class="thumb" id="season-thumb" aria-hidden="true"></span>
+        <button type="button" id="btn-winter" aria-pressed="true">Зима</button>
+        <button type="button" id="btn-summer" aria-pressed="false">Лето</button>
+      </div>
+      <p class="season-tip" id="season-tip">Ориентир: при стабильной температуре <b>около +7 °C</b> меняют летнюю резину на зимнюю. Лучше не тянуть до первого снега — очередь растёт именно тогда.</p>
+      <a class="btn btn-accent" href="#booking">Записаться на переобувку</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Конструктор заявки ===== -->
+<section id="booking">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker">Запись</p>
+      <h2 class="sec-title">Соберите заявку за минуту</h2>
+      <p class="sec-lead">Выберите параметры — мы получим готовое сообщение в WhatsApp или Telegram.</p>
+    </div>
+    <div class="form-card reveal">
+      <form id="booking-form" novalidate>
+        <div class="form-grid">
+          <div class="f-group">
+            <span class="lbl">Тип авто</span>
+            <div class="seg" role="group" aria-label="Тип авто">
+              <button type="button" data-group="car" data-value="Легковой" aria-pressed="true">Легковой</button>
+              <button type="button" data-group="car" data-value="Газель" aria-pressed="false">Газель</button>
+            </div>
+          </div>
+          <div class="f-group">
+            <span class="lbl">Радиус колёс</span>
+            <div class="seg" role="group" aria-label="Радиус колёс">
+              <button type="button" data-group="radius" data-value="R13" aria-pressed="true">R13</button>
+              <button type="button" data-group="radius" data-value="R14" aria-pressed="false">R14</button>
+              <button type="button" data-group="radius" data-value="R15" aria-pressed="false">R15</button>
+              <button type="button" data-group="radius" data-value="R16" aria-pressed="false">R16</button>
+              <button type="button" data-group="radius" data-value="R17" aria-pressed="false">R17</button>
+              <button type="button" data-group="radius" data-value="R18" aria-pressed="false">R18</button>
+              <button type="button" data-group="radius" data-value="R19" aria-pressed="false">R19</button>
+              <button type="button" data-group="radius" data-value="R20" aria-pressed="false">R20</button>
+              <button type="button" data-group="radius" data-value="R21" aria-pressed="false">R21</button>
+              <button type="button" data-group="radius" data-value="R22" aria-pressed="false">R22</button>
+            </div>
+          </div>
+          <div class="f-group" style="grid-column:1/-1">
+            <span class="lbl">Услуги (можно несколько)</span>
+            <div class="seg" role="group" aria-label="Услуги">
+              <button type="button" data-group="svc" data-value="Сезонная замена колёс" aria-pressed="true">Сезонная замена колёс</button>
+              <button type="button" data-group="svc" data-value="Шиномонтаж" aria-pressed="false">Шиномонтаж</button>
+              <button type="button" data-group="svc" data-value="Балансировка" aria-pressed="false">Балансировка</button>
+              <button type="button" data-group="svc" data-value="Диагностика ходовой части" aria-pressed="false">Диагностика ходовой</button>
+            </div>
+          </div>
+          <div class="f-group">
+            <span class="lbl">Когда удобно</span>
+            <div class="seg" role="group" aria-label="Время визита">
+              <button type="button" data-group="when" data-value="сегодня" aria-pressed="true">Сегодня</button>
+              <button type="button" data-group="when" data-value="завтра" aria-pressed="false">Завтра</button>
+              <button type="button" data-group="when" data-value="в другой день" aria-pressed="false">Другой день</button>
+            </div>
+          </div>
+          <div class="f-group">
+            <label class="lbl" for="client-name">Как вас зовут (необязательно)</label>
+            <input type="text" id="client-name" placeholder="Например: Алексей" autocomplete="name" maxlength="40">
+          </div>
+        </div>
+        <div class="preview-box">
+          <p class="pl">Предпросмотр сообщения</p>
+          <div id="msg-preview" aria-live="polite"></div>
+        </div>
+        <div class="form-actions">
+          <a class="btn btn-wa" id="wa-send" href="#" target="_blank" rel="noopener">Отправить в WhatsApp</a>
+          <button type="button" class="btn btn-tg" id="tg-send">Скопировать и открыть Telegram</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Отзывы ===== -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker">Отзывы</p>
+      <h2 class="sec-title">Что говорят клиенты</h2>
+    </div>
+    <div class="big-rating reveal">
+      <div class="num">4,8</div>
+      <span class="stars" aria-hidden="true">★★★★★</span>
+      <p>Рейтинг в 2ГИС по 13 оценкам реальных клиентов</p>
+      <a class="btn btn-accent" href="https://2gis.ru/cheboksary/geo/7459722537996284" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6M10 14 21 3"/></svg>
+        Читать отзывы в 2ГИС
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:18px" class="reveal">
+      <a class="btn btn-ghost" href="https://2gis.ru/cheboksary/geo/7459722537996284" target="_blank" rel="noopener">Все отзывы в 2ГИС</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker">Вопросы</p>
+      <h2 class="sec-title">Частые вопросы</h2>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">
+        Нужна ли запись заранее?
+        <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+      </button>
+      <div class="faq-a"><div class="faq-a-in">Запись не обязательна, но лучше позвонить или написать — подскажем, когда подойти без очереди.</div></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">
+        Какие авто обслуживаете?
+        <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+      </button>
+      <div class="faq-a"><div class="faq-a-in">Легковые авто и Газели — оборудование и опыт под оба типа.</div></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">
+        Какой режим работы?
+        <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+      </button>
+      <div class="faq-a"><div class="faq-a-in">Пн — Вс, 08:00–19:00. Без выходных, 7 дней в неделю.</div></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">
+        Где вы находитесь и как добраться?
+        <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+      </button>
+      <div class="faq-a"><div class="faq-a-in">Чебоксары, <a href="https://2gis.ru/cheboksary/geo/7459722537996284" target="_blank" rel="noopener">Ягодный переулок, 2а</a>. Остановка «Кошкино» (~350 м), рядом парковка. Маршрут удобно построить в 2ГИС.</div></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">
+        Можно ли узнать стоимость заранее?
+        <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+      </button>
+      <div class="faq-a"><div class="faq-a-in">Да. Точную стоимость назовём по телефону или в мессенджере — она зависит от типа авто и размера колёс.</div></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">
+        Как связаться?
+        <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+      </button>
+      <div class="faq-a"><div class="faq-a-in">Звоните <a href="tel:+79373903198">+7 937 390-31-98</a> или пишите в WhatsApp и Telegram — отвечаем быстро.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Как нас найти ===== -->
+<section id="contacts">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker">Контакты</p>
+      <h2 class="sec-title">Как нас найти</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="info-block reveal">
+        <h3>Адрес и режим работы</h3>
+        <div class="irow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.1-7-11a7 7 0 0 1 14 0c0 5.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <span><a href="https://2gis.ru/cheboksary/geo/7459722537996284" target="_blank" rel="noopener">Чебоксары, Ягодный переулок, 2а</a><br>Остановка «Кошкино» — около 350 м, рядом парковка.</span>
+        </div>
+        <div class="irow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <span>Пн — Вс, <b>08:00–19:00</b>. Без выходных.</span>
+        </div>
+        <div class="irow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span><a href="tel:+79373903198">+7 937 390-31-98</a></span>
+        </div>
+        <div class="contact-btns">
+          <a class="btn btn-accent" href="https://2gis.ru/cheboksary/geo/7459722537996284" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l19-8-8 19-2-8-9-3z"/></svg>
+            Проложить маршрут
+          </a>
+          <a class="btn btn-wa" href="https://api.whatsapp.com/send/?phone=79373903198&amp;text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%0A%0A%D0%9F%D0%B8%D1%88%D1%83+%D0%B8%D0%B7+%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F+2%D0%93%D0%98%D0%A1.%0A%0A&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-tg" href="https://t.me/+79373903198" target="_blank" rel="noopener">Telegram</a>
+        </div>
+      </div>
+      <div class="map-card reveal" role="img" aria-label="Схематичная карта: Автосервис в Ягодном переулке, 2а, рядом остановка Кошкино и парковка">
+        <div class="map-grid" aria-hidden="true"></div>
+        <div class="map-road" aria-hidden="true"></div>
+        <div class="map-road dash" style="top:calc(52% + 22px)" aria-hidden="true"></div>
+        <div class="map-pin" aria-hidden="true">
+          <div class="pulse"></div>
+          <span class="head"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3"/></svg></span>
+        </div>
+        <div class="map-label"><b>Автосервис</b> — Ягодный переулок, 2а<br>Открыть в 2ГИС: <a href="https://2gis.ru/cheboksary/geo/7459722537996284" target="_blank" rel="noopener">маршрут и отзывы</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Финальный призыв ===== -->
+<section id="cta">
+  <div class="wrap">
+    <div class="cta-box reveal">
+      <h2>Не откладывайте шиномонтаж.<br><em>Позвоните или напишите сейчас</em></h2>
+      <p>Мы на связи ежедневно с 08:00 до 19:00. Ответим, подскажем по времени и стоимости.</p>
+      <div class="cta-btns">
+        <a class="btn btn-accent" href="tel:+79373903198">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Позвонить
+        </a>
+        <a class="btn btn-wa" href="https://api.whatsapp.com/send/?phone=79373903198&amp;text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%0A%0A%D0%9F%D0%B8%D1%88%D1%83+%D0%B8%D0%B7+%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F+2%D0%93%D0%98%D0%A1.%0A%0A&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-tg" href="https://t.me/+79373903198" target="_blank" rel="noopener">Telegram</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== Футер ===== -->
+<footer>
+  <div class="wrap">
+    <div class="f-row">
+      <span>Автосервис, Чебоксары, <a href="https://2gis.ru/cheboksary/geo/7459722537996284" target="_blank" rel="noopener">Ягодный переулок, 2а</a></span>
+    </div>
+    <div class="f-row">
+      <a href="tel:+79373903198">+7 937 390-31-98</a>
+      <span>Пн — Вс, 08:00–19:00</span>
+      <span class="f-social">
+        <a href="https://api.whatsapp.com/send/?phone=79373903198&amp;text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%0A%0A%D0%9F%D0%B8%D1%88%D1%83+%D0%B8%D0%B7+%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F+2%D0%93%D0%98%D0%A1.%0A%0A&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2z"/></svg>
+        </a>
+        <a href="https://t.me/+79373903198" target="_blank" rel="noopener" aria-label="Telegram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.91 3.79 20.3 20.84c-.25 1.21-.98 1.5-2 .94l-5.5-4.07-2.66 2.57c-.3.3-.55.55-1.1.55-.55 0-.5-.2-.72-.71L6.3 13.69.85 12c-1.18-.35-1.19-1.16.25-1.72l18.44-7.1c1.03-.42 1.86.25 1.6 1.61z"/></svg>
+        </a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== Нижняя панель (мобильные) ===== -->
+<div id="bottom-bar" role="navigation" aria-label="Быстрая связь">
+  <a class="bb-call" href="tel:+79373903198">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Позвонить
+  </a>
+  <a class="bb-wa" href="https://api.whatsapp.com/send/?phone=79373903198&amp;text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%0A%0A%D0%9F%D0%B8%D1%88%D1%83+%D0%B8%D0%B7+%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F+2%D0%93%D0%98%D0%A1.%0A%0A&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2z"/></svg>
+    WhatsApp
+  </a>
+  <a class="bb-tg" href="https://t.me/+79373903198" target="_blank" rel="noopener">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.91 3.79 20.3 20.84c-.25 1.21-.98 1.5-2 .94l-5.5-4.07-2.66 2.57c-.3.3-.55.55-1.1.55-.55 0-.5-.2-.72-.71L6.3 13.69.85 12c-1.18-.35-1.19-1.16.25-1.72l18.44-7.1c1.03-.42 1.86.25 1.6 1.61z"/></svg>
+    Telegram
+  </a>
+</div>
+
+<!-- ===== Плавающая кнопка (десктоп) ===== -->
+<div id="fab-wrap">
+  <div id="fab-menu">
+    <a href="tel:+79373903198">Позвонить</a>
+    <a href="https://api.whatsapp.com/send/?phone=79373903198&amp;text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%0A%0A%D0%9F%D0%B8%D1%88%D1%83+%D0%B8%D0%B7+%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F+2%D0%93%D0%98%D0%A1.%0A%0A&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="https://t.me/+79373903198" target="_blank" rel="noopener">Telegram</a>
+  </div>
+  <button id="fab" aria-expanded="false" aria-controls="fab-menu" aria-label="Быстрая связь">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+  </button>
+</div>
+
+<!-- ===== Наверх ===== -->
+<button id="to-top" aria-label="Наверх">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+(function(){
+'use strict';
+var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ===== Шапка: скролл + прогресс + параллакс ===== */
+var header = document.getElementById('site-header');
+var progress = document.getElementById('scroll-progress');
+var toTop = document.getElementById('to-top');
+function onScroll(){
+  var y = window.scrollY || document.documentElement.scrollTop;
+  header.classList.toggle('scrolled', y > 24);
+  toTop.classList.toggle('show', y > 600);
+  var h = document.documentElement.scrollHeight - window.innerHeight;
+  progress.style.width = (h > 0 ? (y / h * 100) : 0) + '%';
+  if(!reduced){
+    document.querySelectorAll('[data-parallax]').forEach(function(el){
+      el.style.translate = '0 ' + (y * parseFloat(el.dataset.parallax)) + 'px';
+    });
+  }
+}
+window.addEventListener('scroll', onScroll, {passive:true});
+onScroll();
+
+/* ===== Наверх ===== */
+toTop.addEventListener('click', function(){
+  window.scrollTo({top:0, behavior: reduced ? 'auto' : 'smooth'});
+});
+
+/* ===== Гамбургер ===== */
+var burger = document.getElementById('burger');
+var mobileMenu = document.getElementById('mobile-menu');
+burger.addEventListener('click', function(){
+  var open = mobileMenu.classList.toggle('open');
+  burger.setAttribute('aria-expanded', open);
+  burger.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+});
+mobileMenu.querySelectorAll('a').forEach(function(a){
+  a.addEventListener('click', function(){
+    mobileMenu.classList.remove('open');
+    burger.setAttribute('aria-expanded','false');
+  });
+});
+
+/* ===== Бейдж «Открыто сейчас» (Чебоксары, UTC+3, 08:00–19:00) ===== */
+(function(){
+  var badge = document.getElementById('open-badge');
+  var text = document.getElementById('open-text');
+  function upd(){
+    var now = new Date(Date.now() + (3*60 + new Date().getTimezoneOffset()) * 60000);
+    var mins = now.getHours()*60 + now.getMinutes();
+    if(mins >= 480 && mins < 1140){
+      badge.classList.add('open-now');
+      text.textContent = 'Открыто сейчас — до 19:00';
+    } else {
+      badge.classList.add('closed');
+      text.textContent = 'Закрыто, откроемся в 08:00';
+    }
+  }
+  upd();
+  setInterval(upd, 60000);
+})();
+
+/* ===== Reveal + счётчики ===== */
+var countersDone = new WeakSet();
+function runCounter(el){
+  if(countersDone.has(el)) return;
+  countersDone.add(el);
+  var to = parseFloat(el.dataset.to);
+  var dec = el.dataset.dec ? parseInt(el.dataset.dec,10) : 0;
+  if(reduced){ el.textContent = to.toFixed(dec).replace('.',','); return; }
+  var start = null, dur = 1400;
+  function frame(t){
+    if(!start) start = t;
+    var p = Math.min((t - start)/dur, 1);
+    var eased = 1 - Math.pow(1-p, 3);
+    var val = to * eased;
+    el.textContent = (dec ? val.toFixed(dec) : Math.round(val)).replace('.',',');
+    if(p < 1) requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+}
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(en){
+    if(!en.isIntersecting) return;
+    en.target.classList.add('in');
+    en.target.querySelectorAll('.counter').forEach(runCounter);
+    io.unobserve(en.target);
+  });
+},{threshold:0.15, rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+/* ===== Таймлайн ===== */
+var tl = document.querySelector('.tl');
+if(tl){
+  var fill = document.getElementById('tl-fill');
+  var steps = tl.querySelectorAll('.tl-step');
+  var io2 = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(!en.isIntersecting) return;
+      en.target.classList.add('on');
+      var reached = Array.from(steps).filter(function(s){ return s.classList.contains('on'); });
+      fill.style.height = (reached.length / steps.length * 100) + '%';
+      io2.unobserve(en.target);
+    });
+  },{threshold:0.5});
+  steps.forEach(function(s){ io2.observe(s); });
+}
+
+/* ===== Услуги: аккордеон ===== */
+document.querySelectorAll('.svc-head').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var card = btn.closest('.svc-card');
+    var body = card.querySelector('.svc-body');
+    var open = card.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+    body.style.maxHeight = open ? body.scrollHeight + 'px' : '0px';
+  });
+});
+
+/* ===== Услуги: WhatsApp с автоподстановкой ===== */
+var WA_BASE = 'https://api.whatsapp.com/send/?phone=79373903198&type=phone_number&app_absent=0';
+document.querySelectorAll('.svc-wa').forEach(function(a){
+  a.addEventListener('click', function(e){
+    e.preventDefault();
+    var text = 'Здравствуйте!\n\nХочу узнать стоимость: ' + a.dataset.service + '.';
+    window.open(WA_BASE + '&text=' + encodeURIComponent(text), '_blank', 'noopener');
+  });
+});
+
+/* ===== Сезон: переключатель ===== */
+var btnWinter = document.getElementById('btn-winter');
+var btnSummer = document.getElementById('btn-summer');
+var seasonTip = document.getElementById('season-tip');
+var seasonIcon = document.getElementById('season-icon');
+var seasonThumb = document.getElementById('season-thumb');
+function setSeason(winter){
+  btnWinter.setAttribute('aria-pressed', winter);
+  btnSummer.setAttribute('aria-pressed', !winter);
+  seasonThumb.style.transform = winter ? 'translateX(0)' : 'translateX(100%)';
+  seasonIcon.textContent = winter ? '❄️' : '☀️';
+  seasonTip.innerHTML = winter
+    ? 'Ориентир: при стабильной температуре <b>около +7 °C</b> меняют летнюю резину на зимнюю. Лучше не тянуть до первого снега — очередь растёт именно тогда.'
+    : 'Ориентир: при стабильной температуре <b>около +7 °C</b> меняют зимнюю резину на летнюю. Не тяните: зимние шины в тепле изнашиваются быстрее.';
+}
+btnWinter.addEventListener('click', function(){ setSeason(true); });
+btnSummer.addEventListener('click', function(){ setSeason(false); });
+
+/* ===== Конструктор заявки ===== */
+var state = {car:'Легковой', radius:'R13', svc:['Сезонная замена колёс'], when:'сегодня'};
+var preview = document.getElementById('msg-preview');
+var waSend = document.getElementById('wa-send');
+var tgSend = document.getElementById('tg-send');
+var nameInput = document.getElementById('client-name');
+
+function buildMessage(){
+  var name = nameInput.value.trim();
+  var lines = ['Здравствуйте!'];
+  if(name) lines.push('Меня зовут ' + name + '.');
+  lines.push('');
+  lines.push('Хочу записаться на шиномонтаж:');
+  lines.push('• Авто: ' + state.car);
+  lines.push('• Колёса: ' + state.radius);
+  if(state.svc.length) lines.push('• Услуги: ' + state.svc.join(', '));
+  lines.push('• Когда: ' + state.when);
+  lines.push('');
+  lines.push('Подскажите, когда можно подъехать?');
+  return lines.join('\n');
+}
+function render(){
+  preview.textContent = buildMessage();
+  waSend.href = WA_BASE + '&text=' + encodeURIComponent(buildMessage());
+}
+document.querySelectorAll('#booking-form [data-group]').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var g = btn.dataset.group, v = btn.dataset.value;
+    if(g === 'svc'){
+      var i = state.svc.indexOf(v);
+      if(i >= 0){ if(state.svc.length > 1) state.svc.splice(i,1); }
+      else state.svc.push(v);
+      btn.setAttribute('aria-pressed', state.svc.indexOf(v) >= 0);
+    } else {
+      state[g] = v;
+      btn.parentElement.querySelectorAll('button').forEach(function(b){
+        b.setAttribute('aria-pressed', b === btn);
+      });
+    }
+    render();
+  });
+});
+nameInput.addEventListener('input', render);
+render();
+
+tgSend.addEventListener('click', function(){
+  var msg = buildMessage();
+  function done(){ window.open('https://t.me/+79373903198', '_blank', 'noopener'); }
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(msg).then(done, done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = msg; ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    try{ document.execCommand('copy'); }catch(e){}
+    document.body.removeChild(ta);
+    done();
+  }
+});
+
+/* ===== FAQ ===== */
+document.querySelectorAll('.faq-q').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var item = btn.closest('.faq-item');
+    var ans = item.querySelector('.faq-a');
+    var open = item.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+    ans.style.maxHeight = open ? ans.scrollHeight + 'px' : '0px';
+  });
+});
+
+/* ===== FAB ===== */
+var fab = document.getElementById('fab');
+var fabWrap = document.getElementById('fab-wrap');
+fab.addEventListener('click', function(){
+  var open = fabWrap.classList.toggle('open');
+  fab.setAttribute('aria-expanded', open);
+});
+
+/* ===== Курсор-подсветка (только десктоп) ===== */
+if(!reduced && matchMedia('(pointer:fine)').matches){
+  var glow = document.getElementById('cursor-glow');
+  document.addEventListener('mousemove', function(e){
+    glow.style.opacity = '1';
+    glow.style.left = e.clientX + 'px';
+    glow.style.top = e.clientY + 'px';
+  });
+  document.addEventListener('mouseleave', function(){ glow.style.opacity = '0'; });
+}
+
+/* ===== 3D-наклон карточек (только десктоп) ===== */
+if(!reduced && matchMedia('(hover:hover) and (pointer:fine)').matches){
+  document.querySelectorAll('.why-card').forEach(function(card){
+    card.addEventListener('mousemove', function(e){
+      var r = card.getBoundingClientRect();
+      var x = (e.clientX - r.left) / r.width - 0.5;
+      var y = (e.clientY - r.top) / r.height - 0.5;
+      card.style.transform = 'perspective(700px) rotateY(' + (x*7) + 'deg) rotateX(' + (-y*7) + 'deg) translateY(-3px)';
+    });
+    card.addEventListener('mouseleave', function(){
+      card.style.transform = '';
+    });
+  });
+}
+
+/* ===== Чек-лист «Мои шины» ===== */
+var tcBoxes = document.querySelectorAll('.tc-box');
+var tcResult = document.getElementById('tc-result');
+var tcResultText = document.getElementById('tc-result-text');
+if(tcBoxes.length && tcResult && tcResultText){
+  var tcMsgs = [
+    'Пока всё хорошо. Проверьте снова через месяц.',
+    'Стоит показать шины мастеру.',
+    'Лучше не откладывать и записаться на замену.'
+  ];
+  var tcFade = {opacity:'0', transition:'opacity .18s ease'};
+  var tcShow = {opacity:'1', transition:'opacity .3s ease'};
+  function tcUpdate(){
+    var n = 0;
+    tcBoxes.forEach(function(b){ if(b.checked) n++; });
+    var level = n === 0 ? 0 : (n === 1 ? 1 : 2);
+    if(tcResult.dataset.level !== String(level)){
+      tcResult.dataset.level = String(level);
+      if(reduced){
+        tcResult.className = 'tc-result level-' + level;
+        tcResultText.textContent = tcMsgs[level];
+      } else {
+        Object.assign(tcResultText.style, tcFade);
+        setTimeout(function(){
+          tcResult.className = 'tc-result level-' + level;
+          tcResultText.textContent = tcMsgs[level];
+          Object.assign(tcResultText.style, tcShow);
+        }, 180);
+      }
+    }
+  }
+  tcBoxes.forEach(function(b){ b.addEventListener('change', tcUpdate); });
+}
+})();
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
